@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "eslint": "^3.13.1",
+    "testem": "^1.14.2"
+  }
+}
