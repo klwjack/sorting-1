@@ -44,4 +44,10 @@ describe('Merge Sort', function(){
 	it('is able to merge two arrays by interleaving', function(){
 		expect( merge([3, 6], [4, 5]) ).toEqual( [3, 4, 5, 6] );
 	});
+	it('is able to merge two arrays by interleaving', function(){
+		expect( merge([3, 6, 7], [4, 5]) ).toEqual( [3, 4, 5, 6, 7] );
+	});
+	it('is able to merge two arrays by interleaving', function(){
+		expect( merge([4, 6, 7], [2, 3, 5]) ).toEqual( [2, 3, 4, 5, 6, 7] );
+	});
 });
