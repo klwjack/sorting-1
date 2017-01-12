@@ -11,6 +11,19 @@ describe('swap', function(){
 	});
 });
 
+describe('compare', function(){
+	it('compares elements', function () {
+		expect( compare([1, 2], 0) ).toEqual([true]);
+		expect( compare([1, 1], 0) ).toEqual([false]);
+		expect( compare([2, 1], 0) ).toEqual([false]);
+	});
+	it('compares elements at another index', function () {
+		expect( compare([2, 1, 3, 4], 2) ).toEqual([true]);
+		expect( compare([1, 2, 3, 3], 2) ).toEqual([false]);
+		expect( compare([1, 2, 4, 3], 2) ).toEqual([false]);
+	});
+});
+
 describe('Bubble Sort', function(){
 	it('handles an empty array', function(){
 		expect( bubbleSort([]) ).toEqual( [] );
