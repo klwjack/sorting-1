@@ -1,3 +1,16 @@
+describe('swap', function(){
+	it('swaps elements', function () {
+		var currentArray = [1, 2];
+		swap(currentArray, 0);
+		expect( currentArray ).toEqual([2, 1]);
+	});
+	it('swaps elements at another index', function () {
+		var currentArray = [1, 2, 3, 4];
+		swap(currentArray, 2);
+		expect( currentArray ).toEqual([1, 2, 4, 3]);
+	});
+});
+
 describe('Bubble Sort', function(){
 	it('handles an empty array', function(){
 		expect( bubbleSort([]) ).toEqual( [] );
