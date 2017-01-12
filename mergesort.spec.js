@@ -22,19 +22,26 @@ describe('MergeSort', function() {
 });
 
 describe('Split Array function', function() {
-  it('is able to split an array into two halves -odd', function() {
-    // your code here
-    expect( split([5, 3, 2, 1, 1, 1, 2, 2, 4, 2, 4]) ).toEqual( [[1, 1, 1, 2, 2, 2], [2, 3, 4, 4, 5]] );
-  });
+	it('is able to split an array into two halves -odd', function() {
+		expect( split([1, 1, 1, 2, 2, 2, 2, 3, 4, 4, 5]) ).toEqual( [[1, 1, 1, 2, 2, 2], [2, 3, 4, 4, 5]] );
+	});
 
-  it('is able to split an array into two halves -even', function() {
-    // your code here
-    expect( split([5, 3, 2, 1]) ).toEqual( [[5, 3], [2, 1]] );
-  });
+	it('is able to split an array into two halves -even', function() {
+		expect( split([5, 3, 2, 1]) ).toEqual( [[5, 3], [2, 1]] );
+	});
 });
 
 describe('Merge Sort', function(){
-  it('is able to merge two sorted arrays into one sorted array', function(){
-    // test the merging algorithm
-  });
+	it('is able to merge two items (backwards)', function(){
+		expect( merge([4], [5]) ).toEqual( [4, 5] );
+	});
+	it('is able to merge two items', function(){
+		expect( merge([5], [4]) ).toEqual( [4, 5] );
+	});
+	it('is able to merge two arrays by prepending one on the other', function(){
+		expect( merge([5, 6], [3, 4]) ).toEqual( [3, 4, 5, 6] );
+	});
+	it('is able to merge two arrays by interleaving', function(){
+		expect( merge([3, 6], [4, 5]) ).toEqual( [3, 4, 5, 6] );
+	});
 });
